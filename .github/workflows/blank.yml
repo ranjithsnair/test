@@ -24,10 +24,3 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
-      - name: Run Azure PowerShell inline script
-        uses: azure/powershell@v2
-        with:
-          inlineScript: |
-            Get-AzAccessToken -ResourceTypeName MSGraph
-          azPSVersion: "latest"
